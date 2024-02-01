@@ -1,0 +1,23 @@
+syntax = "v1"
+
+info (
+	title:  "notify-service"
+	desc:   "notify-service"
+	author: "edwardzhang"
+	email:  "13917322147@163.com"
+)
+
+type (
+	notifyByEmailReq {
+		msg string `json:"msg"`
+	}
+	notifyByEmailResp {
+		ok bool `json:"ok"`
+	}
+)
+
+service notify-api {
+	@handler NotifyByEmailHandler
+	get /notifyEmail (notifyByEmailReq) returns (notifyByEmailResp)
+}
+
