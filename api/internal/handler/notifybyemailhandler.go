@@ -3,10 +3,11 @@ package handler
 import (
 	"net/http"
 
+	"notify-service/api/internal/logic"
+	"notify-service/api/internal/svc"
+	"notify-service/api/internal/types"
+
 	"github.com/zeromicro/go-zero/rest/httpx"
-	"notify-service/internal/logic"
-	"notify-service/internal/svc"
-	"notify-service/internal/types"
 )
 
 func NotifyByEmailHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {

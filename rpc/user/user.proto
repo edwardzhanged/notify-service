@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "./user";
+
+
+// 定义一个内嵌的数据结构
+message Profile {
+  bool send = 1;
+  string phone = 2;
+  // 可以继续添加其他字段
+}
+
+// 用户服务定义
+service UserService {
+  // 查询用户信息
+  rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+}
+
+// 获取用户请求
+message GetUserRequest {
+  string user_id = 1;
+}
+
+// 用户信息响应
+message GetUserResponse {
+  string user_id = 1;
+  string name = 2;
+  string email = 3;
+  bool success = 4; // 添加布尔值字段
+  Profile profile = 5; // 添加内嵌的数据结构
+}

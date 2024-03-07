@@ -4,9 +4,9 @@ import (
 	"flag"
 	"fmt"
 
-	"notify-service/internal/config"
-	"notify-service/internal/handler"
-	"notify-service/internal/svc"
+	"notify-service/api/internal/config"
+	"notify-service/api/internal/handler"
+	"notify-service/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"

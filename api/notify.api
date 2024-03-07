@@ -8,6 +8,7 @@ info (
 )
 
 type (
+	
 	notifyByEmailReq {
 		msg string `json:"msg"`
 	}

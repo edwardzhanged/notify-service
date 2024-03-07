@@ -1,8 +1,6 @@
 package svc
 
-import (
-	"notify-service/internal/config"
-)
+import "notify-service/rpc/user/internal/config"
 
 type ServiceContext struct {
 	Config config.Config
